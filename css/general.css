@@ -17,7 +17,7 @@ Defaults: 1
 Small: 1.05
 Medium: 1.2
 Paragraph: 1.6
-
+Large: 1.8
 - Letter spacing
 -0.5px
 0.75px
@@ -212,6 +212,7 @@ body {
   color: #fdf2e9;
   padding: 1.2rem;
   align-self: end;
+  margin-top: 1.2rem;
 }
 
 .btn--form:hover {
@@ -247,6 +248,7 @@ body {
   display: flex;
   align-items: center;
   gap: 1.6rem;
+  line-height: 1.2;
 }
 
 .list-icon {
@@ -257,7 +259,6 @@ body {
 
 *:focus {
   outline: none;
-
   box-shadow: 0 0 0 0.8rem rgba(230, 125, 34, 0.5);
   /* outline: 4px dotted #e67e22; */
   /* outline-offset: -8px; */
