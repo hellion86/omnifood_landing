@@ -35,7 +35,10 @@ Paragraph: 1.6
 - Accents:
 #51cf66
 - Greys:
-#6f6f6f; (ligthest grey allowed on #fdf2e9 )
+#888
+#767676 (ligthest grey allowed on #fff )
+#555
+#6f6f6f (ligthest grey allowed on #fdf2e9 )
 #555
 #333
 
@@ -109,6 +112,10 @@ body {
 
 .grid--4-cols {
   grid-template-columns: repeat(4, 1fr);
+}
+
+.grid--5-cols {
+  grid-template-columns: repeat(5, 1fr);
 }
 
 .heading-primary,
@@ -275,5 +282,3 @@ body {
 strong {
   font-weight: 500;
 }
-
-/* HELPER CLASSES */
