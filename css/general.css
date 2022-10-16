@@ -73,6 +73,8 @@ body {
   line-height: 1;
   font-weight: 400;
   color: #555;
+  /* works if there is nothing absolutely positioned */
+  overflow-x: hidden;
 }
 
 /************************************/
@@ -212,7 +214,7 @@ body {
   color: #fdf2e9;
   padding: 1.2rem;
   align-self: end;
-  margin-top: 1.2rem;
+  /* margin-top: 1.2rem; */
 }
 
 .btn--form:hover {
