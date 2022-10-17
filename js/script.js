@@ -1,3 +1,4 @@
+// date at footer
 const currentYear = new Date().getFullYear();
 const footerDate = document.querySelector('.year');
 footerDate.textContent = currentYear;
@@ -8,6 +9,32 @@ const headerMenu = document.querySelector('.header');
 
 menuButton.addEventListener('click', () => {
   headerMenu.classList.toggle('nav-open');
+});
+
+// smooth scrolling
+const allLinks = document.querySelectorAll('a:link');
+
+allLinks.forEach((link) => {
+  link.addEventListener('click', (e) => {
+    e.preventDefault();
+    const href = link.getAttribute('href');
+    // scroll to top
+    if (href === '#') {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth',
+      });
+    }
+    // scrol to other links
+    if (href !== '#' && href.startsWith('#')) {
+      const sectionJumpTo = document.querySelector(href);
+      sectionJumpTo.scrollIntoView({ behavior: 'smooth' });
+    }
+    // close menu
+    if (link.classList.contains('main-nav-link')) {
+      headerMenu.classList.toggle('nav-open');
+    }
+  });
 });
 
 ///////////////////////////////////////////////////////////
